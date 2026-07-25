@@ -1,9 +1,11 @@
 # Application
 web/app/plugins/*
 !web/app/plugins/.gitkeep
-# Custom plugin (our code, not a Composer dependency)
+# Custom plugins (our code, not a Composer dependency)
 !web/app/plugins/shop-checkout/
 !web/app/plugins/shop-checkout/**
+!web/app/plugins/shop-payment-gateways/
+!web/app/plugins/shop-payment-gateways/**
 # Ignore Composer-installed mu-plugin directories; single-file mu-plugins are tracked intentionally
 web/app/mu-plugins/*/
 web/app/themes/twentytwentyfive/
