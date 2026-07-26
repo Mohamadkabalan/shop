@@ -20,3 +20,8 @@ ini_set('display_errors', '1');
 
 // Enable plugin and theme updates and installation from the admin
 Config::define('DISALLOW_FILE_MODS', false);
+
+// Caching stays off in development so code/content changes are always
+// reflected immediately, with no stale page or object cache to work around.
+Config::define('WP_REDIS_DISABLED', true);
+Config::define('WP_CACHE', false);

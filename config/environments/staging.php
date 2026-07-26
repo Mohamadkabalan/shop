@@ -16,3 +16,8 @@ use Roots\WPConfig\Config;
  */
 
 Config::define('DISALLOW_INDEXING', true);
+
+// Match production's caching behavior so cache-related bugs surface here
+// first, not after a production deploy.
+Config::define('WP_REDIS_DISABLED', false);
+Config::define('WP_CACHE', true);

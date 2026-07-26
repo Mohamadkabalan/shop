@@ -157,6 +157,23 @@ Config::define('WP_POST_REVISIONS', env('WP_POST_REVISIONS') ?? true);
 Config::define('CONCATENATE_SCRIPTS', false);
 
 /**
+ * Caching
+ *
+ * Connection details for the redis-cache plugin's object-cache.php drop-in,
+ * and the constant WP Super Cache's advanced-cache.php drop-in requires
+ * before it can find its own plugin directory. Both are safe to define in
+ * every environment: whether either drop-in is actually active is gated by
+ * WP_REDIS_DISABLED / WP_CACHE (config/environments/{WP_ENV}.php) and
+ * converged by bin/shop-cache-configure.php.
+ */
+Config::define('WP_REDIS_HOST', env('REDIS_HOST') ?: 'redis');
+Config::define('WP_REDIS_PORT', env('REDIS_PORT') ?: 6379);
+Config::define('WP_REDIS_DATABASE', env('REDIS_DATABASE') ?? 0);
+// Namespaces cache keys so multiple environments/sites can share one Redis instance.
+Config::define('WP_REDIS_PREFIX', (env('REDIS_PREFIX') ?: env('DB_NAME')) . ':');
+Config::define('WPCACHEHOME', Config::get('WP_CONTENT_DIR') . '/plugins/wp-super-cache/');
+
+/**
  * Debugging Settings
  */
 Config::define('WP_DEBUG_DISPLAY', false);

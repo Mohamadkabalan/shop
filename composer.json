@@ -46,9 +46,12 @@
     "roots/wp-config": "^1.0",
     "vlucas/phpdotenv": "^5.0",
     "wp-theme/twentytwentyfive": "^1.0",
+    "wpackagist-plugin/ewww-image-optimizer": "^8.7",
+    "wpackagist-plugin/redis-cache": "^2.8",
     "wpackagist-plugin/woocommerce": "^10.9",
     "wpackagist-plugin/woocommerce-gateway-stripe": "^10.8",
     "wpackagist-plugin/woocommerce-paypal-payments": "^4.1",
+    "wpackagist-plugin/wp-super-cache": "^3.1",
     "wpackagist-plugin/yith-woocommerce-wishlist": "^4.17"
   },
   "require-dev": {
