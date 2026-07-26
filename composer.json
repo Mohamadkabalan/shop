@@ -52,6 +52,7 @@
     "wpackagist-plugin/woocommerce": "^10.9",
     "wpackagist-plugin/woocommerce-gateway-stripe": "^10.8",
     "wpackagist-plugin/woocommerce-paypal-payments": "^4.1",
+    "wpackagist-plugin/wordfence": "^8.2",
     "wpackagist-plugin/wp-super-cache": "^3.1",
     "wpackagist-plugin/yith-woocommerce-wishlist": "^4.17"
   },
