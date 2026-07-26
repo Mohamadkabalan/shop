@@ -64,7 +64,8 @@
     "psr-4": {
       "App\\ShopCheckout\\": "web/app/plugins/shop-checkout/src/",
       "App\\ShopPaymentGateways\\": "web/app/plugins/shop-payment-gateways/src/",
-      "App\\ShopAccount\\": "web/app/plugins/shop-account/src/"
+      "App\\ShopAccount\\": "web/app/plugins/shop-account/src/",
+      "App\\ShopApi\\": "web/app/plugins/shop-api/src/"
     }
   },
   "config": {
@@ -99,6 +100,7 @@
   "scripts": {
     "lint": "pint --test",
     "lint:fix": "pint",
-    "test": "pest"
+    "test": "pest",
+    "rotate-salts": "php bin/rotate-salts.php"
   }
 }

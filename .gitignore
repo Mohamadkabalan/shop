@@ -8,6 +8,8 @@ web/app/plugins/*
 !web/app/plugins/shop-payment-gateways/**
 !web/app/plugins/shop-account/
 !web/app/plugins/shop-account/**
+!web/app/plugins/shop-api/
+!web/app/plugins/shop-api/**
 # Ignore Composer-installed mu-plugin directories; single-file mu-plugins are tracked intentionally
 web/app/mu-plugins/*/
 web/app/themes/twentytwentyfive/
@@ -15,6 +17,8 @@ web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
 web/app/cache/*
+# Wordfence runtime data (WAF rules, GeoIP DB, logs) — regenerated on activation
+web/app/wflogs/*
 
 # WordPress
 web/wp

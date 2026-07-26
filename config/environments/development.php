@@ -25,3 +25,11 @@ Config::define('DISALLOW_FILE_MODS', false);
 // reflected immediately, with no stale page or object cache to work around.
 Config::define('WP_REDIS_DISABLED', true);
 Config::define('WP_CACHE', false);
+
+// WordPress's default "pseudo-cron" spawns a loopback HTTP request on every
+// page load whenever anything is due, and that request runs due jobs (WP-Cron
+// events, WooCommerce's Action Scheduler queue) synchronously — with several
+// plugins each scheduling their own hooks, a slow one (e.g. an external HTTP
+// check) blocks that visitor's entire page load. Run `wp cron event run
+// --due-now` manually (or on a real schedule in staging/production) instead.
+Config::define('DISABLE_WP_CRON', true);

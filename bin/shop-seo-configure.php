@@ -14,6 +14,14 @@
  * on first activation; this script converges to that state on every run in
  * case a future update changes the defaults, or WooCommerce wasn't active
  * yet when Rank Math was first installed.
+ *
+ * Also sets a "post name" permalink structure and writes the Apache
+ * mod_rewrite block: Rank Math's sitemap (and pretty product/category URLs
+ * generally) don't work under WordPress's default "Plain" permalinks, and
+ * WP-CLI runs under the CLI SAPI, where WordPress's own got_mod_rewrite()
+ * detection always fails (it can only detect mod_rewrite from an actual
+ * Apache request) — so the .htaccess block has to be written explicitly
+ * here rather than relying on `wp rewrite flush --hard`.
  */
 
 if (! defined('WP_CLI') || ! class_exists('WooCommerce')) {
@@ -22,6 +30,29 @@ if (! defined('WP_CLI') || ! class_exists('WooCommerce')) {
 
 if (! defined('RANK_MATH_VERSION')) {
     WP_CLI::error('Rank Math must be an active plugin before running this script (wp plugin activate seo-by-rank-math).');
+}
+
+// --- Permalinks: required for the sitemap (and pretty product URLs) --------
+
+if ('' === get_option('permalink_structure')) {
+    global $wp_rewrite;
+
+    $wp_rewrite->set_permalink_structure('/%postname%/');
+    update_option('permalink_structure', '/%postname%/');
+
+    require_once ABSPATH . 'wp-admin/includes/file.php';
+    // Bedrock's docroot (web/) isn't ABSPATH (web/wp/), which is what
+    // get_home_path() assumes — so target the docroot .htaccess directly.
+    $htaccess_file = dirname(rtrim(ABSPATH, '/')) . '/.htaccess';
+    $rules = explode("\n", $wp_rewrite->mod_rewrite_rules());
+
+    if (insert_with_markers($htaccess_file, 'WordPress', $rules)) {
+        WP_CLI::log("Set a post-name permalink structure and wrote mod_rewrite rules to {$htaccess_file}.");
+    } else {
+        WP_CLI::warning("Set a post-name permalink structure, but couldn't write {$htaccess_file} — check it's writable.");
+    }
+} else {
+    WP_CLI::log('Permalink structure already set: ' . get_option('permalink_structure'));
 }
 
 // --- Modules: Schema, WooCommerce integration, XML Sitemaps ----------------

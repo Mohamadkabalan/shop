@@ -157,6 +157,14 @@ Config::define('WP_POST_REVISIONS', env('WP_POST_REVISIONS') ?? true);
 Config::define('CONCATENATE_SCRIPTS', false);
 
 /**
+ * Rank Math otherwise refuses to boot its module manager (schema, sitemaps,
+ * everything) until a site connects a free rankmath.com account through the
+ * admin UI — this is their own documented escape hatch for headless/scripted
+ * setups so the plugin works immediately after `composer install` + seed.
+ */
+Config::define('RANK_MATH_REGISTRATION_SKIP', true);
+
+/**
  * Caching
  *
  * Connection details for the redis-cache plugin's object-cache.php drop-in,

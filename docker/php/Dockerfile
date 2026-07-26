@@ -26,5 +26,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && chmod +x /usr/local/bin/wp
 
 COPY vhost.conf /etc/apache2/sites-available/000-default.conf
+COPY php.ini /usr/local/etc/php/conf.d/zz-shop.ini
 
 WORKDIR /var/www/html
