@@ -6,6 +6,8 @@ web/app/plugins/*
 !web/app/plugins/shop-checkout/**
 !web/app/plugins/shop-payment-gateways/
 !web/app/plugins/shop-payment-gateways/**
+!web/app/plugins/shop-account/
+!web/app/plugins/shop-account/**
 # Ignore Composer-installed mu-plugin directories; single-file mu-plugins are tracked intentionally
 web/app/mu-plugins/*/
 web/app/themes/twentytwentyfive/

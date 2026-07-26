@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "318c7b63e5186cc21faac104c6f27823",
+    "content-hash": "b0e65135ffcce8263ba7f216685c27c8",
     "packages": [
         {
             "name": "brick/math",
@@ -7135,6 +7135,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/woocommerce-paypal-payments/"
+        },
+        {
+            "name": "wpackagist-plugin/yith-woocommerce-wishlist",
+            "version": "4.17.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/yith-woocommerce-wishlist/",
+                "reference": "tags/4.17.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/yith-woocommerce-wishlist.4.17.0.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/yith-woocommerce-wishlist/"
         }
     ],
     "packages-dev": [

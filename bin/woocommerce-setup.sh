@@ -8,6 +8,6 @@ set -euo pipefail
 
 cd "$(dirname "$0")/.."
 
-wp plugin activate woocommerce
+wp plugin activate woocommerce yith-woocommerce-wishlist shop-account
 wp eval-file bin/woocommerce-configure.php
 wp rewrite flush
