@@ -11,4 +11,5 @@ cd "$(dirname "$0")/.."
 wp plugin activate woocommerce yith-woocommerce-wishlist shop-account
 wp eval-file bin/woocommerce-configure.php
 wp eval-file bin/shop-filters-configure.php
+wp eval-file bin/shop-reviews-configure.php
 wp rewrite flush
