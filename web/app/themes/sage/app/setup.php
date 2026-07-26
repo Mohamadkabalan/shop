@@ -171,4 +171,10 @@ add_action('widgets_init', function () {
         'name' => __('Footer', 'sage'),
         'id' => 'sidebar-footer',
     ] + $config);
+
+    register_sidebar([
+        'name' => __('Shop Filters', 'sage'),
+        'id' => 'sidebar-shop',
+        'description' => __('Shown on the shop page and product category/tag archives. See woocommerce/global/sidebar.php.', 'sage'),
+    ] + $config);
 });
