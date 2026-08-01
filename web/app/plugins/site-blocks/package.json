@@ -1,0 +1,13 @@
+{
+  "name": "site-blocks",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Custom Gutenberg blocks for the shop, built with @wordpress/scripts.",
+  "scripts": {
+    "start": "wp-scripts start",
+    "build": "wp-scripts build"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^30.0.0"
+  }
+}

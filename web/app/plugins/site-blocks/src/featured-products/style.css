@@ -1,0 +1,65 @@
+/*
+ * Frontend styles — self-contained, no dependency on the active theme's
+ * framework (loaded on every page that has this block, editor and frontend).
+ */
+
+.site-blocks-featured-products {
+	margin-block: 2rem;
+}
+
+.site-blocks-featured-products__title {
+	margin-block-end: 1rem;
+}
+
+.site-blocks-featured-products__grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 1.5rem;
+}
+
+.site-blocks-featured-products.columns-2 .site-blocks-featured-products__grid {
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.site-blocks-featured-products.columns-3 .site-blocks-featured-products__grid {
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.site-blocks-featured-products.columns-4 .site-blocks-featured-products__grid {
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.site-blocks-featured-products__card {
+	display: flex;
+}
+
+.site-blocks-featured-products__link {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	width: 100%;
+	color: inherit;
+	text-decoration: none;
+}
+
+.site-blocks-featured-products__image img {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+}
+
+.site-blocks-featured-products__name {
+	font-weight: 600;
+}
+
+.site-blocks-featured-products__price {
+	color: #555;
+}
+
+@media (max-width: 600px) {
+	.site-blocks-featured-products__grid {
+		grid-template-columns: 1fr !important;
+	}
+}

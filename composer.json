@@ -33,6 +33,14 @@
       "name": "wpackagist",
       "type": "composer",
       "url": "https://wpackagist.org"
+    },
+    {
+      "name": "advanced-custom-fields-pro",
+      "type": "composer",
+      "url": "https://connect.advancedcustomfields.com",
+      "only": [
+        "wpengine/advanced-custom-fields-pro"
+      ]
     }
   ],
   "require": {
@@ -54,7 +62,8 @@
     "wpackagist-plugin/woocommerce-paypal-payments": "^4.1",
     "wpackagist-plugin/wordfence": "^8.2",
     "wpackagist-plugin/wp-super-cache": "^3.1",
-    "wpackagist-plugin/yith-woocommerce-wishlist": "^4.17"
+    "wpackagist-plugin/yith-woocommerce-wishlist": "^4.17",
+    "wpengine/advanced-custom-fields-pro": "^6.0"
   },
   "require-dev": {
     "laravel/pint": "^1.0",
@@ -65,7 +74,8 @@
       "App\\ShopCheckout\\": "web/app/plugins/shop-checkout/src/",
       "App\\ShopPaymentGateways\\": "web/app/plugins/shop-payment-gateways/src/",
       "App\\ShopAccount\\": "web/app/plugins/shop-account/src/",
-      "App\\ShopApi\\": "web/app/plugins/shop-api/src/"
+      "App\\ShopApi\\": "web/app/plugins/shop-api/src/",
+      "App\\SiteBlocks\\": "web/app/plugins/site-blocks/src/"
     }
   },
   "config": {

@@ -8,7 +8,7 @@ set -euo pipefail
 
 cd "$(dirname "$0")/.."
 
-wp plugin activate woocommerce yith-woocommerce-wishlist shop-account redis-cache wp-super-cache ewww-image-optimizer seo-by-rank-math wordfence
+wp plugin activate woocommerce yith-woocommerce-wishlist shop-account redis-cache wp-super-cache ewww-image-optimizer seo-by-rank-math wordfence site-blocks
 wp eval-file bin/woocommerce-configure.php
 wp eval-file bin/shop-filters-configure.php
 wp eval-file bin/shop-reviews-configure.php

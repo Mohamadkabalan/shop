@@ -10,6 +10,8 @@ web/app/plugins/*
 !web/app/plugins/shop-account/**
 !web/app/plugins/shop-api/
 !web/app/plugins/shop-api/**
+!web/app/plugins/site-blocks/
+!web/app/plugins/site-blocks/**
 # Ignore Composer-installed mu-plugin directories; single-file mu-plugins are tracked intentionally
 web/app/mu-plugins/*/
 web/app/themes/twentytwentyfive/

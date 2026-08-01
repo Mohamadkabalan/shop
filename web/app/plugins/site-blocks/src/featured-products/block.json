@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "site-blocks/featured-products",
+	"title": "Featured Products",
+	"category": "site-blocks",
+	"icon": "store",
+	"description": "A manually curated grid of WooCommerce products — image, title, and price.",
+	"textdomain": "site-blocks",
+	"supports": {
+		"align": true,
+		"html": false
+	},
+	"attributes": {
+		"previewColumns": {
+			"type": "string",
+			"default": "3"
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

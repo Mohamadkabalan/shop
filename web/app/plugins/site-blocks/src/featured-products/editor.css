@@ -1,0 +1,45 @@
+/*
+ * Editor-only styles for the static mock in edit.js.
+ */
+
+.site-blocks-featured-products-editor {
+	border: 1px dashed #ccc;
+	padding: 1rem;
+}
+
+.site-blocks-featured-products-editor__label {
+	margin: 0 0 1rem;
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: #757575;
+}
+
+.site-blocks-featured-products-editor__grid {
+	display: grid;
+	grid-template-columns: repeat(var(--columns, 3), minmax(0, 1fr));
+	gap: 1rem;
+	margin-block-end: 1rem;
+}
+
+.site-blocks-featured-products-editor__card {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.site-blocks-featured-products-editor__image {
+	aspect-ratio: 1 / 1;
+	background: #f0f0f0;
+	border: 1px dashed #ccc;
+}
+
+.site-blocks-featured-products-editor__title {
+	font-weight: 600;
+	color: #1e1e1e;
+}
+
+.site-blocks-featured-products-editor__price {
+	color: #757575;
+}
