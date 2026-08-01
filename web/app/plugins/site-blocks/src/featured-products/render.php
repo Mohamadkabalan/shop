@@ -39,7 +39,7 @@ if (empty($productIds)) {
             if (! $product) {
                 continue;
             }
-        ?>
+            ?>
             <div class="site-blocks-featured-products__card">
                 <a class="site-blocks-featured-products__link" href="<?php echo esc_url(get_permalink($productId)); ?>">
                     <div class="site-blocks-featured-products__image">

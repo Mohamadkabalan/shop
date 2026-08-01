@@ -1,0 +1,59 @@
+/*
+ * Frontend styles — self-contained, no dependency on the active theme's
+ * framework.
+ */
+
+.site-blocks-contact-form {
+	max-width: 32rem;
+}
+
+.site-blocks-contact-form__notice {
+	padding: 0.75rem 1rem;
+	margin-block-end: 1rem;
+	border-radius: 4px;
+}
+
+.site-blocks-contact-form__notice--success {
+	background: #edf7ed;
+	color: #1e4620;
+	border: 1px solid #b6dfb6;
+}
+
+.site-blocks-contact-form__notice--error {
+	background: #fdeded;
+	color: #5f2120;
+	border: 1px solid #f3b8b8;
+}
+
+.site-blocks-contact-form__field {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	margin-block-end: 1rem;
+}
+
+.site-blocks-contact-form__field label {
+	font-weight: 600;
+}
+
+.site-blocks-contact-form__field input,
+.site-blocks-contact-form__field textarea {
+	padding: 0.5rem;
+	border: 1px solid #949494;
+	border-radius: 4px;
+	font: inherit;
+}
+
+.site-blocks-contact-form__submit button {
+	padding: 0.6rem 1.5rem;
+	background: #1e1e1e;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font: inherit;
+}
+
+.site-blocks-contact-form__submit button:hover {
+	background: #383838;
+}

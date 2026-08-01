@@ -14,6 +14,9 @@ defined('ABSPATH') || exit;
  */
 class BlockRegistration
 {
+    /** @var array<int, string> */
+    private const BLOCKS = ['featured-products', 'contact-form'];
+
     public function boot(): void
     {
         add_action('init', [$this, 'registerBlocks']);
@@ -21,12 +24,12 @@ class BlockRegistration
 
     public function registerBlocks(): void
     {
-        $buildPath = dirname(__DIR__) . '/build/featured-products';
+        foreach (self::BLOCKS as $block) {
+            $buildPath = dirname(__DIR__) . "/build/{$block}";
 
-        if (! file_exists($buildPath . '/block.json')) {
-            return;
+            if (file_exists($buildPath . '/block.json')) {
+                register_block_type($buildPath);
+            }
         }
-
-        register_block_type($buildPath);
     }
 }

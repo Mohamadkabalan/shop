@@ -1,0 +1,38 @@
+/*
+ * Editor-only styles for the static mock in edit.js.
+ */
+
+.site-blocks-contact-form-editor {
+	max-width: 32rem;
+	border: 1px dashed #ccc;
+	padding: 1rem;
+}
+
+.site-blocks-contact-form-editor__label {
+	margin: 0 0 1rem;
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: #757575;
+}
+
+.site-blocks-contact-form-editor__field {
+	height: 2.25rem;
+	background: #f0f0f0;
+	border: 1px dashed #ccc;
+	margin-block-end: 0.75rem;
+}
+
+.site-blocks-contact-form-editor__field--tall {
+	height: 5rem;
+}
+
+.site-blocks-contact-form-editor__button {
+	display: inline-block;
+	padding: 0.6rem 1.5rem;
+	background: #1e1e1e;
+	color: #fff;
+	border-radius: 4px;
+	margin-block-end: 1rem;
+}

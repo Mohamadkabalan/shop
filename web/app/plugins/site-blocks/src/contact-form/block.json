@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "site-blocks/contact-form",
+	"title": "Contact Form",
+	"category": "widgets",
+	"icon": "email",
+	"description": "A simple contact form (name, email, message) that saves submissions to the database.",
+	"textdomain": "site-blocks",
+	"supports": {
+		"html": false
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}
